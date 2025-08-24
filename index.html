@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>موقعي الشخصي - زياد</title>
+  <style>
+    body
+ {      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #000;
+      color: #fff;
+      overflow-x: hidden;
+    }
+    canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+    header {
+      text-align: center;
+      padding: 100px 20px;
+      animation: fadeIn 2s ease-in-out;
+    }
+    h1 {
+      font-size: 3em;
+      color: #00fff7;
+      text-shadow: 0 0 15px #00fff7, 0 0 30px #007bff;
+      animation: slideIn 2s ease-in-out;
+    }
+    p {
+      font-size: 1.2em;
+      color: #ddd;
+      animation: fadeIn 3s ease-in-out;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 25px;
+      border-radius: 30px;
+      background: #00fff7;
+      color: #000;
+      font-weight: bold;
+      text-decoration: none;
+      box-shadow: 0 0 15px #00fff7, 0 0 40px #007bff;
+      transition: 0.3s;
+      animation: glow 2s infinite alternate;
+    }
+    .btn:hover {
+      background: #007bff;
+      color: #fff;
+      box-shadow: 0 0 20px #00fff7, 0 0 50px #007bff;
+    }
+    section {
+      padding: 80px 20px;
+      text-align: center;
+    }
+    section h2 {
+      color: #00fff7;
+      margin-bottom: 20px;
+    }
+    #skills {
+      padding: 80px 20px;
+      text-align: center;
+    }
+    .skill {
+      margin: 20px auto;
+      max-width: 500px;
+      text-align: left;
+    }
+    .skill span {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+      color: #00fff7;
+    }
+    .progress {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      overflow: hidden;
+      height: 25px;
+      box-shadow: 0 0 10px #00fff7;
+    }
+    .progress-bar {
+      height: 100%;
+      line-height: 25px;
+      text-align: right;
+      padding-right: 10px;
+      background: linear-gradient(90deg, #007bff, #00fff7);
+      color: #000;
+      font-weight: bold;
+      box-shadow: 0 0 15px #00fff7;
+      transition: width 2s ease-in-out;
+    }
+    .projects {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+    .project-card {
+      background: rgba(255,255,255,0.05);
+      padding: 20px;
+      border-radius: 15px;
+      width: 250px;
+      box-shadow: 0 0 15px #00fff7;
+      transition: 0.3s;
+    }
+    .project-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 30px #007bff;
+    }
+    .project-card h3 {
+      color: #00fff7;
+      margin-bottom: 10px;
+    }
+    .contact a {
+      color: #00fff7;
+      margin: 0 15px;
+      font-size: 1.5em;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    .contact a:hover {
+      color: #007bff;
+      text-shadow: 0 0 10px #00fff7;
+    }
+    footer {
+      background: rgba(255,255,255,0.05);
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+      color: #aaa;
+    }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes slideIn { from { transform: translateY(-50px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+    @keyframes glow { from { box-shadow: 0 0 10px #00fff7; } to { box-shadow: 0 0 25px #00fff7, 0 0 50px #007bff; } }
+  </style>
+</head>
+<body>
+
+  <canvas id="stars"></canvas>
+
+  <header>
+    <h1>مرحبًا بك في عالمي</h1>
+    <p>أنا زياد 🚀 بحب البرمجة والذكاء الاصطناعي ونفسي أبقى مهندس برمجة</p>
+    <a href="#about" class="btn">انطلق معي</a>
+
+ </header>
+
+  <section id="about">
+    <h2>من أنا؟</h2>
+    <p>أنا زياد، شغوف بالبرمجة والذكاء الاصطناعي، وأسعى أن أصبح مهندس برمجة وأشارك في بناء المستقبل الرقمي.</p>
+  </section>
+
+  <section id="skills">
+    <h2>مهاراتي</h2>
+    <div class="skill">
+      <span>HTML</span>
+      <div class="progress"><div class="progress-bar" style="width: 90%;">90%</div></div>
+    </div>
+    <div class="skill">
+      <span>CSS</span>
+      <div class="progress"><div class="progress-bar" style="width: 85%;">85%</div></div>
+    </div>
+    <div class="skill">
+      <span>JavaScript</span>
+      <div class="progress"><div class="progress-bar" style="width: 75%;">75%</div></div>
+    </div>
+    <div class="skill">
+      <span>AI Basics</span>
+      <div class="progress"><div class="progress-bar" style="width: 60%;">60%</div></div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>مشاريعي</h2>
+    <div class="projects">
+      <div class="project-card">
+        <h3>مشروع 1</h3>
+        <p>موقع شخصي باستخدام HTML & CSS.</p>
+      </div>
+      <div class="project-card">
+        <h3>مشروع 2</h3>
+        <p>تطبيق ويب تفاعلي باستخدام JavaScript.</p>
+      </div>
+      <div class="project-card">
+        <h3>مشروع 3</h3>
+        <p>تجربة بسيطة في الذكاء الاصطناعي.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>تواصل معي</h2>
+    <div class="contact">
+      <a href="mailto:Ziadriby123@gmail.com">📧</a>
+      <a href="https://www.facebook.com/share/1CbFBTp8FB/" target="_blank">📘</a>
+      <a href="https://www.instagram.com/ziad_j1?igsh=MW14d242NmJrMmw5NA==" target="_blank">📷</a>
+      <a href="https://wa.me/201012148292" target="_blank">💬</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 جميع الحقوق محفوظة | موقع زياد الشخصي</p>
+  </footer>
+
+  <script>
+    const canvas = document.getElementById("stars");
+    const ctx = canvas.getContext("2d");
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    let stars = [];
+    for (let i = 0; i < 200; i++) {
+      stars.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        radius: Math.random() * 2,
+        speed: Math.random() * 0.5
+      });
+    }
+
+    function drawStars() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = "#fff";
+      stars.forEach(star => {
+        ctx.beginPath();
+        ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
+        ctx.fill();
+      });
+    }
+
+    function updateStars() {
+      stars.forEach(star => {
+        star.y += star.speed;
+        if (star.y > canvas.height) star.y = 0;
+      });
+    }
+
+    function animate() {
+      drawStars();
+      updateStars();
+      requestAnimationFrame(animate);
+    }
+    animate();
+  </script>
+</body>
+</html>

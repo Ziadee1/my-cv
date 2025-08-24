@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>تحميل السيرة الذاتية</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(135deg, #1e3c72, #2a5298); /* خلفية متدرجة أزرق غامق */
+      font-family: Arial, sans-serif;
+    }
+    .cv-buttons {
+      display: flex;
+      gap: 30px; /* مسافة بين الأزرار */
+    }
+    .btn {
+      display: inline-block;
+      padding: 16px 32px;
+      font-size: 18px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s, transform 0.2s;
+      color: white;
+      text-align: center;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+    }
+    .btn.view {
+      background: #007BFF; /* أزرق للعرض */
+    }
+    .btn.view:hover {
+      background: #0056b3;
+      transform: scale(1.08);
+    }
+    .btn.download {
+      background: #28a745; /* أخضر للتحميل */
+    }
+    .btn.download:hover {
+      background: #1e7e34;
+      transform: scale(1.08);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="cv-buttons">
+    <a href="cv.pdf" target="_blank" class="btn view">👁️ عرض السيرة الذاتية</a>
+    <a href="cv.pdf" download class="btn download">⬇️ تحميل السيرة الذاتية</a>
+  </div>
+
+</body>
+</html>
